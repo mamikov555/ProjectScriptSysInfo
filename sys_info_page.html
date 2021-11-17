@@ -1,0 +1,35 @@
+
+echo "<html>
+        <head>
+ 	       <title>System Information Report For mikov-virtual-machine</title>
+ 		</head>
+ 		<body>
+   			<h1>System Information Report For mikov-virtual-machine</h1>
+<p> Generated 11/12/2021 08:12:38 AM EET, by mikov </p>
+Function report_uptime executed.
+           <h2>System Uptime </h2>
+   <pre> 08:12:38 up 36 min,  1 user,  load average: 0,01, 0,04, 0,07</pre>
+   _EOF_
+
+return
+}
+report_disk_space (){
+echo "Function report_disk_space executed."
+cat <<- _EOF_
+         <h2>Disk Space Utilization</h2>
+ <pre>Filesystem      Size  Used Avail Use% Mounted on
+udev            3,9G     0  3,9G   0% /dev
+tmpfs           794M  1,7M  792M   1% /run
+/dev/sda5        49G   13G   34G  28% /
+tmpfs           3,9G     0  3,9G   0% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           3,9G     0  3,9G   0% /sys/fs/cgroup
+/dev/sda1       511M  4,0K  511M   1% /boot/efi
+tmpfs           794M   32K  794M   1% /run/user/1000
+/dev/sr0        2,0G  2,0G     0 100% /media/mikov/Linux Mint 20.2 MATE 64-bit1</pre>
+
+Function report_home_space executed.
+         <h2>Home Space Utilization</h2>
+ <pre>220M	/home/mikov</pre>
+</body>
+</html>"
