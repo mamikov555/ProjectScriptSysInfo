@@ -1,8 +1,10 @@
 #!/bin/bash
 # Script to retrieve a file via FTP
 
-FTP_SERVER=ftp.nl.debian.org FTP_PATH=/debian/dists/stretch/main/installeramd64/
-current/images/cdrom REMOTE_FILE=debian-cd_info.tar.gz
+FTP_SERVER=ftp.nl.debian.org 
+FTP_PATH=/debian/dists/stretch/main/installeramd64/
+current/images/cdrom 
+REMOTE_FILE=debian-cd_info.tar.gz
 
 ftp -n << _EOF_
 	open $FTP_SERVER
